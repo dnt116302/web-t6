@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Components\MenuRecusive;
+use Illuminate\Support\Str;
+
 class MenuController extends Controller
 {
     private $menuRecusive;
