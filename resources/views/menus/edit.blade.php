@@ -16,11 +16,12 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <form action="{{route('menus.update')}}" method="POST">
+                <form action="{{route('menus.edit', ['id'=> $menuFollowIdEdit->id ])}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label>Tên menu</label>
-                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập tên menu">
+                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập tên menu" value="{{$menuFollowIdEdit->name}}">
+
                       </div>
                       <div class="form-group">
                         <label>Chọn menu cha</label>
