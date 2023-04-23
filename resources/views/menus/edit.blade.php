@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <form action="{{route('menus.edit', ['id'=> $menuFollowIdEdit->id ])}}" method="POST">
+                <form action="{{route('menus.update', ['id'=> $menuFollowIdEdit->id ])}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label>Tên menu</label>
