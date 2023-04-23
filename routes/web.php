@@ -74,7 +74,7 @@ Route::prefix('menus')->group(function () {
         'uses' => 'App\Http\Controllers\MenuController@edit'
     ]);
 
-    Route::post('/update/{id}', [
+    Route::get('/update/{id}', [
         'as' => 'menus.update',
         'uses' => 'App\Http\Controllers\MenuController@update'
     ]);
