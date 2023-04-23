@@ -38,6 +38,6 @@ class MenuController extends Controller
 
     public function edit($id, Request $request){
         $optionSelect = $this->menuRecusive->menuRecusiveAdd();
-        return view('menus.edit');
+        return view('menus.edit', compact('optionSelect'));
     }
 }
