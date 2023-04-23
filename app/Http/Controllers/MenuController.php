@@ -29,12 +29,11 @@ class MenuController extends Controller
     }
 
     public function store(Request $request){
-        dd($this->menu);
-        // $this->menu->create([
-        //     'name' => $request->name,
-        //     'parent_id' => $request->parent_id,
-        //     'slug' => Str::slug($request-> name)
-        // ]);
-        // return redirect()->route('menus.index');
+        $this->menu->create([
+            'name' => $request->name,
+            'parent_id' => $request->parent_id,
+            'slug' => Str::slug($request-> name)
+        ]);
+        return redirect()->route('menus.index');
     }
 }
