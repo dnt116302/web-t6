@@ -37,7 +37,8 @@ class MenuController extends Controller
     }
 
     public function edit($id, Request $request){
+        $menuFollowIdEdit = $this->menu->find($id);
         $optionSelect = $this->menuRecusive->menuRecusiveAdd();
-        return view('menus.edit', compact('optionSelect'));
+        return view('menus.edit', compact('optionSelect', 'menuFollowIdEdit'));
     }
 }
