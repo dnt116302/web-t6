@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('menus', function (Blueprint $table) {
             //
+            $table->string('slug');
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('menus', function (Blueprint $table) {
             //
+            $table->dropColumn('slug');
         });
     }
 };
