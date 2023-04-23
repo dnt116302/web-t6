@@ -24,7 +24,6 @@ class MenuController extends Controller
 
     public function create(){
         $optionSelect = $this->menuRecusive->menuRecusiveAdd();
-        
         return view('menus.add', compact('optionSelect'));
     }
 
@@ -35,5 +34,10 @@ class MenuController extends Controller
             'slug' => Str::slug($request-> name)
         ]);
         return redirect()->route('menus.index');
+    }
+
+    public function edit($id, Request $request){
+        $optionSelect = $this->menuRecusive->menuRecusiveAdd();
+        return view('menus.edit');
     }
 }
