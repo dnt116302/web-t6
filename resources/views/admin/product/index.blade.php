@@ -1,9 +1,9 @@
 @extends('layout.admin')
- 
+
 @section('title')
     <title>Trang chủ</title>
 @endsection
- 
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -17,7 +17,7 @@
         <div class="row">
 
             <div class="col-md-12">
-                <a href="" class="btn btn-success float-right m-2">Add</a>
+                <a href="{{route('product.create')}}" class="btn btn-success float-right m-2">Add</a>
             </div>
 
             <div class="col-md-12">
@@ -53,7 +53,7 @@
                     </tbody>
                   </table>
             </div>
-            
+
             <div class="col-md-12">
               {{-- {{$categories->links()}} --}}
             </div>
@@ -66,5 +66,4 @@
   </div>
   <!-- /.content-wrapper -->
 @endsection
-  
-  
+
