@@ -84,6 +84,14 @@ Route::prefix('admin')->group(function(){
             'uses' => 'App\Http\Controllers\MenuController@delete'
         ]);
     });
+
+    Route::prefix('product')->group(function () {
+        Route::get('/', [
+            'as' => 'product.index',
+            'uses' => 'App\Http\Controllers\AdminProductController@index'
+        ]);
+
+    });
 });
 
 
