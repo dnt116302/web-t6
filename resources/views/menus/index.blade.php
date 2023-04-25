@@ -37,7 +37,7 @@
                         <td>{{$menu->name}}</td>
                         <td>
                           <a href="{{route('menus.edit', ['id' => $menu->id ])}}" class="btn btn-default">Sửa</a>
-                          <a href="" class="btn btn-danger">Xóa</a>
+                          <a href="{{route('menus.delete', ['id' => $menu->id ])}}" class="btn btn-danger">Xóa</a>
                         </td>
                       </tr>
                       @endforeach
