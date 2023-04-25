@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AdminProductController extends Controller
 {
     public function index(){
-        dd('list product');
+        return view('admin.product.index');
     }
 }
