@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'AdminController@loginAdmin');
+Route::get('/', 'App\Http\Controllers\AdminController@loginAdmin');
 
 Route::get('/home', function () {
     return view('Home');
