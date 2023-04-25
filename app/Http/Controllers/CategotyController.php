@@ -19,13 +19,13 @@ class CategotyController extends Controller
         $recusive = new Recusive($data);
         $htmlOption = $recusive->categoryRecusive();
 
-        return view('category.add', compact('htmlOption'));
+        return view('admin.category.add', compact('htmlOption'));
     }
 
 
     public function index(){
         $categories = $this->category->latest()->paginate(5);
-        return view('category.index', compact('categories'));
+        return view('admin.category.index', compact('categories'));
     }
 
     public function store(Request $request){
@@ -44,7 +44,7 @@ class CategotyController extends Controller
         $recusive = new Recusive($data);
         $htmlOption = $recusive->categoryRecusive();
         $category = $this->category->find($id);
-        return view('category.edit', compact('category', 'htmlOption'));
+        return view('admin.category.edit', compact('category', 'htmlOption'));
     }
 
     public function update($id, Request $request){
