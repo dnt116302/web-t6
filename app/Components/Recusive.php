@@ -2,7 +2,7 @@
 namespace App\Components;
 class Recusive{
     private $data;
-    private $htmlSlelect = '';
+    private $htmlOption = '';
 
     public function __construct($data){
         $this->data = $data;
@@ -11,12 +11,12 @@ class Recusive{
     public function categoryRecusive($id = 0, $text = ''){
         foreach($this->data as $value){
             if($value->parent_id == $id){
-                $this->htmlSlelect.= "<option value='" . $value["id"] . "'>" . $text . $value['name']. "</option>"; 
+                $this->htmlOption.= "<option value='" . $value["id"] . "'>" . $text . $value['name']. "</option>";
                 $this->categoryRecusive($value['id'], $text . '-');
             }
         }
 
-        return $this->htmlSlelect;
+        return $this->htmlOption;
     }
 
 }
