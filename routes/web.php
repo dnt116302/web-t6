@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\AdminController@loginAdmin');
+Route::get('/admin', 'App\Http\Controllers\AdminController@loginAdmin');
+Route::post('/admin', 'App\Http\Controllers\AdminController@postloginAdmin');
 
 Route::get('/home', function () {
-    return view('Home');
+    return view('home');
 });
 
 Route::prefix('categories')->group(function () {
