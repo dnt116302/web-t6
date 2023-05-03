@@ -25,7 +25,7 @@ class AdminProductController extends Controller
     public function getCategory($parentId){
         $data = $this->category->all();
         $recusive = new Recusive($data);
-        $htmlOption = $recusive->categoryRecusive($parentId);
+        $htmlOption = $recusive->categoryRecusive();
         return $htmlOption;
     }
 }
