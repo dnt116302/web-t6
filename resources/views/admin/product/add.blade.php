@@ -36,12 +36,12 @@
 
                     <div class="form-group">
                         <label>Ảnh giới thiệu</label>
-                        <input type="file" class="form-control" name="feature_image_path" id="exampleInputEmail1">
+                        <input type="file" class="form-control-file" name="feature_image_path" id="exampleInputEmail1">
                     </div>
 
                     <div class="form-group">
                         <label>Ảnh chi tiết</label>
-                        <input type="file" multiple class="form-control" name="image_path[]" id="exampleInputEmail1">
+                        <input type="file" multiple class="form-control-file" name="image_path[]" id="exampleInputEmail1">
                     </div>
 
                     <div class="form-group">
@@ -51,15 +51,15 @@
 
                     <div class="form-group">
                         <label>Chọn danh mục</label>
-                        <select class="form-control" name="parent_id" id="exampleFormControlSelect1">
-                            <option value="0">None</option>
+                        <select class="form-control select2_init" name="parent_id" id="exampleFormControlSelect1">
+                            <option value="">None</option>
                             {!! $htmlOption !!}
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label>Tạo tags</label>
-                        <select class="form-control tags_select_choose" multiple="multiple"></select>
+                        <select name="tag[]" class="form-control tags_select_choose" multiple="multiple"></select>
                     </div>
 
                     <button type="Submit" class="btn btn-primary">Submit</button>
@@ -79,10 +79,17 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(function() {
-        $(".tags_select_choose").select2({
-            tags: true,
-            tokenSeparators: [',', ' ']
+            $(".tags_select_choose").select2({
+                tags: true,
+                tokenSeparators: [',', ' ']
+            });
         });
+
+        $(function() {
+            $(".select2_init").select2({
+                placeholder: "Chọn danh mục",
+                allowClear: true
+            });
         });
     </script>
 @endsection
