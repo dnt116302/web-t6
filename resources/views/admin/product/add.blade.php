@@ -5,7 +5,9 @@
 @endsection
 
 @section('css')
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @endsection
 
 @section('content')
@@ -57,9 +59,7 @@
 
                     <div class="form-group">
                         <label>Tạo tags</label>
-                        <select class="form-control tags_select_choose" multiple="multiple">
-
-                        </select>
+                        <select class="form-control tags_select_choose" multiple="multiple"></select>
                     </div>
 
                     <button type="Submit" class="btn btn-primary">Submit</button>
@@ -76,13 +76,13 @@
 
 
 @section('js')
-    <script href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(function ()){
-            $(".tags_select_choose").select2({
-                tags: true,
-                tokenSeparators: [',', ' ']
-            })
-        }
+        $(function() {
+        $(".tags_select_choose").select2({
+            tags: true,
+            tokenSeparators: [',', ' ']
+        });
+        });
     </script>
 @endsection
