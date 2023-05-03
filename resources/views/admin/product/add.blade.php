@@ -55,6 +55,13 @@
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label>Tạo tags</label>
+                        <select class="form-control tags_select_choose" multiple="multiple">
+
+                        </select>
+                    </div>
+
                     <button type="Submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -69,7 +76,7 @@
 
 
 @section('js')
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(function ()){
             $(".tags_select_choose").select2({
