@@ -26,7 +26,7 @@
                         <label>Chọn danh mục</label>
                         <select class="form-control" name="parent_id" id="exampleFormControlSelect1">
                           <option value="0">None</option>
-                            {{-- {!! $htmlOption !!} --}}
+                            {!! $htmlOption !!}
                         </select>
                       </div>
 
