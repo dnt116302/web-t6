@@ -1,9 +1,9 @@
 @extends('layout.admin')
- 
+
 @section('title')
     <title>Trang chủ</title>
 @endsection
- 
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -15,13 +15,10 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-
-            
-
             <div class="col-md-12">
-                    Trang chu
+                    Trang chủ
             </div>
-            
+
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -30,5 +27,4 @@
   </div>
   <!-- /.content-wrapper -->
 @endsection
-  
-  
+
